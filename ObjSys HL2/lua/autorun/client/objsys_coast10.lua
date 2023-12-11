@@ -7,7 +7,7 @@
 
 	local RemoveDelay = math.huge
 
-hook.Add("HUDPaint", "Canals10Obj", function(ply)
+hook.Add("HUDPaint", "Coast10Obj", function(ply)
 
 if GetConVar("ResetObjectives"):GetInt() == 1 then
 	ActiveObjective = ""
