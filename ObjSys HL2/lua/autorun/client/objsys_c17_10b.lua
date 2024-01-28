@@ -1,6 +1,7 @@
 // All the stuff for doing the other stuff
 
 	local ActiveObjective = ""
+	local BarneyObjective = ""
 	local CurObjMarker = 0
 	local ExitGateDown = false
 	local RemoveDelay = math.huge

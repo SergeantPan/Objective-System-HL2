@@ -33,6 +33,7 @@ end
 	local YPos = math.Round(tostring(ply:GetPos().y), 0)
 	local ZPos = math.Round(tostring(ply:GetPos().z), 0) + 3
 
+
 // Start the objective stuff
 	draw.DrawText( "Current Objectives:", "ObjSysBig", ScrW() * Width, ScrH() * Height, Alpha, 0 )
 	draw.DrawText( "__________________", "ObjSysBig", ScrW() * Width, ScrH() * (Height + 0.01), Alpha, 0 )
