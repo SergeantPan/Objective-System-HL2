@@ -72,7 +72,7 @@ if CurObjMarker == 3 then
 	CurObjSpot = nil
 	CurObjTriggerSpot = nil
 	ActiveObjective = "- Reach Black Mesa East - Objective Complete"
-	DeathObjective = "Objective Failed"
+	DeathObjective = "- Objective Failed"
 	RemoveDelay = CurTime() + 5
 	CurObjMarker = CurObjMarker + 1
 end
