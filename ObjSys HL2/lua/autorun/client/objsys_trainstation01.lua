@@ -60,7 +60,7 @@ end
 // Marker stuff
 local Marker = Material("ping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = nil
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, -5419, -5284) and YPos == math.Clamp(YPos, -1988, -1925) )
 end
@@ -101,7 +101,7 @@ end
 if CurObjMarker == 10 then
 	CurObjTriggerSpot = nil
 	ActiveObjective = "- Make your way through the trainstation\n- Follow the Metrocop"
-	DeathObjective = "- Make your way through the trainstation - Objective Failed\n- Obey the Metrocop - Objective Failed"
+	DeathObjective = "- Make your way through the trainstation - Objective Failed\n- Follow the Metrocop - Objective Failed"
 	CurObjMarker = CurObjMarker + 1
 end
 if CurObjMarker == 11 then
@@ -109,7 +109,7 @@ if CurObjMarker == 11 then
 end
 if CurObjMarker == 12 then
 	ActiveObjective = "- Make your way through the trainstation\n- Follow the Metrocop - Objective Complete"
-	DeathObjective = "- Make your way through the trainstation - Objective Failed\n- Obey the Metrocop - Objective Failed"
+	DeathObjective = "- Make your way through the trainstation - Objective Failed"
 	RemoveDelay = CurTime() + 5
 	CurObjMarker = CurObjMarker + 1
 end

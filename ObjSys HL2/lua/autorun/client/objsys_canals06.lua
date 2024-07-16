@@ -70,7 +70,7 @@ end
 local Marker = Material("ping.png")
 local CuriosityMarker = Material("locationping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(8022, 9082, -459)
 	CurObjTriggerSpot = (XPos == math.Clamp(XPos, 7935, 8111) and YPos == math.Clamp(YPos, 8961, 9218))
 end
@@ -90,6 +90,7 @@ end
 if CurObjMarker == 4 then
 	CurObjTriggerSpot = nil
 	ActiveObjective = "- Continue through the canals\n>The airboat is the only way to reach BME\n- Use the ramp to cross the gap\n>Those blue barrels should help"
+	DeathObjective = "- Continue through the canals - Objective Failed\n- Use the ramp to cross the gap - Objective Failed"
 	CurObjMarker = CurObjMarker + 1
 end
 if CurObjMarker == 5 then

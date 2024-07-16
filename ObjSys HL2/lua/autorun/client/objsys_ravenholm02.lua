@@ -73,7 +73,7 @@ end
 // Marker stuff
 local Marker = Material("ping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(-1028, 803, -3428)
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, -1056, -984) and YPos == math.Clamp(YPos, 776, 830) )
 end
@@ -134,6 +134,7 @@ if CurObjMarker == 15 then
 	CurObjSpot = nil
 	CurObjTriggerSpot = nil
 	ActiveObjective = "- Find a way out of Ravenholm\n- Survive until the cart arrives"
+	DeathObjective = "- Find a way out of Ravenholm - Objective Failed\n- Survive until the cart arrives - Objective Failed"
 	CurObjMarker = CurObjMarker + 1
 end
 if CurObjMarker == 16 then
@@ -142,6 +143,7 @@ end
 if CurObjMarker == 17 and ply:OnGround() then
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, -5254, -4418) and YPos == math.Clamp(YPos, 398, 1216) )
 	ActiveObjective = string.gsub(ActiveObjective, "arrives", "arrives - Objective Complete")
+	DeathObjective = "- Find a way out of Ravenholm - Objective Failed"
 	RemoveDelay = CurTime() + 5
 end
 if CurObjMarker == 18 and ply:OnGround() then

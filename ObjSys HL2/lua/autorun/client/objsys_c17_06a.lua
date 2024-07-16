@@ -60,7 +60,7 @@ end
 // Marker stuff
 local Marker = Material("ping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(3552, -6373, -236)
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, 3520, 3583) and YPos == math.Clamp(YPos, -6368, -6327) )
 end

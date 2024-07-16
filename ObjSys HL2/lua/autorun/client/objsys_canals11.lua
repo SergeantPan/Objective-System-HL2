@@ -59,7 +59,7 @@ end
 // Marker stuff
 local Marker = Material("ping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(9994, 8192, -950)
 	CurObjTriggerSpot = (XPos == math.Clamp(XPos, 9736, 10239) and YPos == math.Clamp(YPos, 8065, 8192))
 end
@@ -102,7 +102,7 @@ end
 if CurObjMarker == 8 then
 	CurObjTriggerSpot = nil
 	ActiveObjective = "- Continue through the canals - Objective Complete"
-	DeathObjective = "Objective Failed"
+	DeathObjective = "- Objective Failed"
 	RemoveDelay = CurTime() + 5
 	CurObjMarker = CurObjMarker + 1
 end

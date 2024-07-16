@@ -61,7 +61,7 @@ end
 local Marker = Material("ping.png")
 local CuriosityMarker = Material("locationping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = nil
 	CurObjTriggerSpot = ZPos < 890
 end

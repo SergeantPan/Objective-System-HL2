@@ -70,7 +70,7 @@ end
 local Marker = Material("ping.png")
 local CuriosityMarker = Material("locationping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = nil
 	CurObjTriggerSpot = (XPos == math.Clamp(XPos, 4461, 4559) and YPos == math.Clamp(YPos, -2559, -2512))
 end
@@ -152,6 +152,7 @@ if CurObjMarker == 16 then
 	CurObjTriggerSpot = nil
 	SubObjSpot2 = nil
 	ActiveObjective = "- Find a way out of Ravenholm\n- Find a way to disable the electricity - Objective Complete"
+	DeathObjective = "- Find a way out of Ravenholm - Objective Failed"
 	RemoveDelay = CurTime() + 5
 	CurObjMarker = CurObjMarker + 1
 end

@@ -84,7 +84,7 @@ else
 ActiveObjective = BaseObjective
 end
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(4675, 1212, 300)
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, 4632, 4727) and YPos == math.Clamp(YPos, 1147, 1272) )
 end

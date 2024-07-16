@@ -60,7 +60,7 @@ end
 // Marker stuff
 local Marker = Material("ping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(-553, 3272, -1260)
 	CurObjTriggerSpot = (XPos == math.Clamp(XPos, -575, -433) and YPos == math.Clamp(YPos, 3201, 3328))
 end
@@ -90,12 +90,14 @@ if CurObjMarker == 6 then
 end
 if CurObjMarker == 7 and RemoveDelay < CurTime() then
 	ActiveObjective = "- Take a look around"
+	DeathObjective = "- Take a look around - Objective Failed"
 	CurObjMarker = CurObjMarker + 1
 end
 if CurObjMarker == 8 then
 for k, v in pairs( ents.FindByClass("npc_alyx") ) do
 if v:IsValid() and AlyxHere == nil then
 	ActiveObjective = "- Take a look around - Objective Complete"
+	DeathObjective = "Objective Failed"
 	CurObjMarker = CurObjMarker + 1
 	AlyxHere = true
 	RemoveDelay = CurTime() + 5
@@ -109,6 +111,7 @@ if CurObjMarker == 10 then
 	CurObjSpot = Vector(-464, 2128, -2716)
 	CurObjTriggerSpot = (XPos == math.Clamp(XPos, -685, -473) and YPos == math.Clamp(YPos, 2064, 2192))
 	ActiveObjective = "- Follow Alyx"
+	DeathObjective = "- Follow Alyx - Objective Failed"
 end
 if CurObjMarker == 11 then
 	CurObjSpot = Vector(-598, 1190, -2668)

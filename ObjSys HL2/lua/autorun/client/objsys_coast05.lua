@@ -72,7 +72,7 @@ end
 local Marker = Material("ping.png")
 local CuriosityMarker = Material("locationping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(5418, -11814, 1704)
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, 5385, 5443) and YPos == math.Clamp(YPos, -12157, -11554) )
 end
@@ -165,10 +165,11 @@ if CurObjMarker == 19 then
 	SubObjective = "\n- There's something behind that fencing"
 	SubObjTriggerSpot = ( XPos == math.Clamp(XPos, -3567, -3186) and YPos == math.Clamp(YPos, 1143, 1424) )
 	ActiveObjective = "- Reach Nova Prospekt\n- Reach Lighthouse Point\n>There should be a Rebel base at the lighthouse\n- Disable the forcefield\n>That APC is powering the forcefield"
+	DeathObjective = "- Reach Nova Prospekt - Objective Failed\n- Reach Lighthouse Point - Objective Failed\n- Disable the forcefield - Objective Failed"
 for _,ForceField in pairs(ents.FindByClass("prop_dynamic")) do
 if ForceField:GetModel() == "models/props_combine/combine_fence01a.mdl" and ForceField:GetSkin() == 1 then
 	ActiveObjective = "- Reach Nova Prospekt\n- Reach Lighthouse Point\n>There should be a Rebel base at the lighthouse\n- Disable the forcefield - Objective Complete"
-	DeathObjective = "- Reach Nova Prospekt\n- Reach Lighthouse Point\n>There should be a Rebel base at the lighthouse"
+	DeathObjective = "- Reach Nova Prospekt - Objective Failed\n- Reach Lighthouse Point - Objective Failed"
 	SubObjSpot = nil
 	RemoveDelay = CurTime() + 5
 	CurObjMarker = CurObjMarker +  1

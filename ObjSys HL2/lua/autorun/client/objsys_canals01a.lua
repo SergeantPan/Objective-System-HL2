@@ -51,7 +51,7 @@ if CurObjMarker == 0 then
 	DeathObjective = "- Evade the Metropolice - Objective Failed\n- Find the rebel network - Objective Failed"
 	CurObjMarker = 1
 end
-if CurObjMarker == 15 then // Final number
+if CurObjMarker == 16 then // Final number
 	ActiveObjective = "- Proceed to the next level"
 end
 
@@ -62,7 +62,7 @@ end
 local Marker = Material("ping.png")
 local CuriosityMarker = Material("locationping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(935, 3994, -71)
 	CurObjTriggerSpot = (XPos == math.Clamp(XPos, 870, 960) and YPos == math.Clamp(YPos, 3956, 4039))
 end

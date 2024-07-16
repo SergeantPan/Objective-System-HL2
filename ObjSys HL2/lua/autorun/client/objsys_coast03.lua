@@ -80,7 +80,7 @@ if IsValid(Gman) and NLOText == false then
 end
 end
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(-6048, -10652, 277)
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, -8384, -2526) and YPos == math.Clamp(YPos, -10859, -10255) )
 end
@@ -136,6 +136,7 @@ end
 if CurObjMarker == 12 then
 	CurObjTriggerSpot = nil
 	ActiveObjective = "- Reach New Little Odessa - Objective Complete\n- Reach Nova Prospekt"
+	DeathObjective = "- Reach Nova Prospekt - Objective Failed"
 	RemoveDelay = CurTime() + 5
 	CurObjMarker = CurObjMarker + 1
 end

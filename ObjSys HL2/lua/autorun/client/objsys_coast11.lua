@@ -81,7 +81,7 @@ if CurObjMarker != 24 and (XPos == math.Clamp(XPos, 3480, 4889) and YPos == math
 	CurObjMarker = 24
 end
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(3412, -8788, 1580)
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, 3211, 3860) and YPos == math.Clamp(YPos, -8834, -8827) )
 end
@@ -238,6 +238,7 @@ if CurObjMarker == 27 and RemoveDelay < CurTime() then
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, 753, 834) and YPos == math.Clamp(YPos, 11465, 11608) )
 if ply:HasWeapon("weapon_bugbait") == true then
 	ActiveObjective = "- Reach Nova Prospekt\n- Follow the Vortigaunt"
+	DeathObjective = "- Reach Nova Prospekt - Objective Failed\n- Follow the Vortigaunt - Objective Failed"
 end
 end
 if CurObjMarker == 28 then
@@ -248,6 +249,7 @@ end
 end
 	CurObjTriggerSpot = nil
 	ActiveObjective = "- Reach Nova Prospekt\n- Learn how to use Bugbaits"
+	DeathObjective = "- Reach Nova Prospekt - Objective Failed\n- Learn how to use Bugbaits - Objective Failed"
 end
 if CurObjMarker == 29 then
 	CurObjTriggerSpot = nil

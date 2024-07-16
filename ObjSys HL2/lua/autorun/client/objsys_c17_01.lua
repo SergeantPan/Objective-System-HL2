@@ -51,7 +51,7 @@ if CurObjMarker == 0 then
 	DeathObjective = "- Escape Nova Prospekt - Objective Failed"
 	CurObjMarker = 1
 end
-	if CurObjMarker == 15 then // Final number
+	if CurObjMarker == 5 then // Final number
 	ActiveObjective = "- Proceed to the next level"
 end
 
@@ -60,7 +60,7 @@ end
 // Marker stuff
 local Marker = Material("ping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = nil
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, -7270, -7089) and YPos == math.Clamp(YPos, -1249, -1088) )
 end
@@ -76,6 +76,7 @@ end
 if CurObjMarker == 4 then
 	CurObjTriggerSpot = nil
 	ActiveObjective = "- Find Barney\n- Assault the Citadel"
+	DeathObjective = "- Find Barney - Objective Failed\n- Assault the Citadel - Objective Failed"
 	CurObjMarker = CurObjMarker + 1
 end
 if CurObjMarker == 5 then

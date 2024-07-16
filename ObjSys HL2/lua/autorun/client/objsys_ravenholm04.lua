@@ -69,7 +69,7 @@ end
 local Marker = Material("ping.png")
 local CuriosityMarker = Material("locationping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(614, -1270, -4780)
 	CurObjTriggerSpot = ZPos < -4650
 end

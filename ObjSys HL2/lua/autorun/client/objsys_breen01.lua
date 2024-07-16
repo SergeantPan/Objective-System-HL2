@@ -93,7 +93,7 @@ end
 if CurObjMarker == 2 then
 	CurObjTriggerSpot = nil
 	ActiveObjective = "- Rescue Alyx and Eli - Objective Failed\n- Kill Breen - Objective Failed"
-	DeathObjective = "Objective Failed"
+	DeathObjective = "- Objective Failed"
 	RemoveDelay = CurTime() + 5
 	CurObjMarker = CurObjMarker + 1
 end

@@ -70,7 +70,7 @@ end
 local Marker = Material("ping.png")
 local CuriosityMarker = Material("locationping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(-10753, 2072, -370)
 	CurObjTriggerSpot = (XPos == math.Clamp(XPos, -10992, -10514) and YPos == math.Clamp(YPos, 1927, 2026))
 end
@@ -84,7 +84,7 @@ if CurObjMarker == 3 then
 for k, v in pairs( ents.FindByClass("helicopter_chunk") ) do
 if v:GetModel() == "models/gibs/helicopter_brokenpiece_06_body.mdl" and HelicopterDestroyed == nil then
 	ActiveObjective = "- Destroy the Hunter Chopper - Objective Complete\n- Reach Black Mesa East\n>BME is located at the bottom of the dam"
-	DeathObjective = "- Reach Black Mesa East\n>BME is located at the bottom of the dam"
+	DeathObjective = "- Reach Black Mesa East - Objective Failed"
 	RemoveDelay = CurTime() + 5
 	CurObjMarker = CurObjMarker + 1
 	HelicopterDestroyed = true
@@ -94,8 +94,8 @@ end
 if CurObjMarker == 4 and RemoveDelay < CurTime() then
 	CurObjSpot = Vector(3129, 2579, -170)
 	CurObjTriggerSpot = (XPos == math.Clamp(XPos, 3073, 3183) and YPos == math.Clamp(YPos, 2514, 2648))
-	ActiveObjective = "- Open the floodgate\n>That floodgate blocks the way to BME\n- Reach Black Mesa East\n>BME is located at the bottom of the dam"
-	DeathObjective = "- Open the floodgate - Objective Failed\n- Reach Black Mesa East - Objective Failed"
+	ActiveObjective = "- Reach Black Mesa East\n>BME is located at the bottom of the dam\n- Open the floodgate\n>That floodgate blocks the way to BME"
+	DeathObjective = "- Reach Black Mesa East - Objective Failed\n- Open the floodgate - Objective Failed"
 end
 if CurObjMarker == 5 then
 	CurObjSpot = Vector(4666, 685, -96)
@@ -148,7 +148,7 @@ end
 if CurObjMarker == 12 then
 	SubObjSpot = nil
 	CurObjTriggerSpot = nil
-	ActiveObjective = "- Open the floodgate - Objective Complete\n- Reach Black Mesa East\n>BME is located at the bottom of the dam"
+	ActiveObjective = "- Reach Black Mesa East\n>BME is located at the bottom of the dam\n- Open the floodgate - Objective Complete"
 	RemoveDelay = CurTime() + 5
 	CurObjMarker = CurObjMarker + 1
 end

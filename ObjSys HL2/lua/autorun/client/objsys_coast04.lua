@@ -71,7 +71,7 @@ end
 local Marker = Material("ping.png")
 local CuriosityMarker = Material("locationping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(-8366, -511, 185)
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, -8455, -8146) and YPos == math.Clamp(YPos, -836, -167) )
 end
@@ -102,6 +102,7 @@ if CurObjMarker == 6 then
 end
 if CurObjMarker == 7 then
 	ActiveObjective = "- Reach Nova Prospekt\n- Use the crane to lower the bridge"
+	DeathObjective = "- Reach Nova Prospekt - Objective Failed\n- Use the crane to lower the bridge - Objective Failed"
 	CurObjTriggerSpot = nil
 	CurObjMarker = CurObjMarker + 1
 end
@@ -124,6 +125,7 @@ if CurObjMarker == 11 then
 	CurObjTriggerSpot = nil
 	SubObjSpot = nil
 	ActiveObjective = "- Reach Nova Prospekt\n- Use the crane to lower the bridge - Objective Complete"
+	DeathObjective = "- Reach Nova Prospekt - Objective Failed"
 	SubObjective = string.gsub(SubObjective, "Thumper%\n%>It should help repel the Antlions", "Thumper - Objective Failed")
 	RemoveDelay = CurTime() + 5
 	CurObjMarker = CurObjMarker + 1

@@ -69,7 +69,7 @@ end
 local Marker = Material("ping.png")
 local CuriosityMarker = Material("locationping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(-14078, 9756, 532)
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, -14336, -13760) and YPos == math.Clamp(YPos, 9693, 9819) )
 end

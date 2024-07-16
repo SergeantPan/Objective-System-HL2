@@ -46,7 +46,7 @@ end
 
 if CurObjMarker == 0 then
 	ActiveObjective = ""
-	DeathObjective = "Objective Failed"
+	DeathObjective = "- Objective Failed"
 	CurObjMarker = 1
 end
 	if CurObjMarker == 13 then // Final number
@@ -58,7 +58,7 @@ end
 // Marker stuff
 local Marker = Material("ping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = nil
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, -9216, -9155) and YPos == math.Clamp(YPos, -3456, -3388) )
 end

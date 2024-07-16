@@ -54,7 +54,7 @@ if CurObjMarker == 0 then
 	DeathObjective = "- Find a way out of Ravenholm - Objective Failed"
 	CurObjMarker = 1
 end
-	if CurObjMarker == 8 or CurObjMarker == 25 then // Final number
+	if CurObjMarker == 8 or CurObjMarker == 26 then // Final number
 	ActiveObjective = "- Proceed to the next level"
 end
 if SubObjective != "" then
@@ -69,7 +69,7 @@ end
 local Marker = Material("ping.png")
 local CuriosityMarker = Material("locationping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(154, -283, -3244)
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, 126, 184) and YPos == math.Clamp(YPos, -329, -247))
 end
@@ -154,6 +154,7 @@ if CurObjMarker == 16 then
 	CurObjTriggerSpot = nil
 	SubObjSpot2 = nil
 	ActiveObjective = "- Find a way out of Ravenholm\n- Find a way to disable the electricity - Objective Complete"
+	DeathObjective = "- Find a way out of Ravenholm - Objective Failed"
 	RemoveDelay = CurTime() + 5
 	CurObjMarker = CurObjMarker + 1
 end

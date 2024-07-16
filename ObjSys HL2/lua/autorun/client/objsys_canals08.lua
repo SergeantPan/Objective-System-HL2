@@ -61,7 +61,7 @@ end
 local Marker = Material("ping.png")
 local CuriosityMarker = Material("locationping.png")
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(9794, -10563, -415)
 	CurObjTriggerSpot = (XPos == math.Clamp(XPos, 9465, 10176) and YPos == math.Clamp(YPos, -10543, -10336))
 end
@@ -76,6 +76,7 @@ end
 if CurObjMarker == 4 then
 	CurObjTriggerSpot = nil
 	ActiveObjective = "- Continue through the canals\n>The airboat is the only way to reach BME\n- Find a way to open the gates"
+	DeathObjective = "- Continue through the canals - Objective Failed\n- Find a way to open the gates - Objective Failed"
 	CurObjMarker = CurObjMarker + 1
 end
 if CurObjMarker == 5 then
@@ -142,6 +143,7 @@ if CurObjMarker == 18 and RemoveDelay < CurTime() then
 	CurObjSpot = Vector(-1572, -4095, -610)
 	CurObjTriggerSpot = (XPos == math.Clamp(XPos, -1939, -1730) and YPos == math.Clamp(YPos, -4495, -3694))
 	ActiveObjective = "- Continue through the canals\n>The airboat is the only way to reach BME"
+	DeathObjective = "- Continue through the canals - Objective Failed"
 end
 if CurObjMarker == 19 then
 	CurObjSpot = Vector(-6248, -3088, -548)

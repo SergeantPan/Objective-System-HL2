@@ -78,7 +78,7 @@ elseif !IsValid(AlyxAliveCheck) then
 end
 end
 
-if CurObjMarker == 1 then // Just examples
+if CurObjMarker == 1 then
 	CurObjSpot = Vector(-2145, 2924, 980)
 	CurObjTriggerSpot = ( XPos == math.Clamp(XPos, -2240, -2064) and YPos == math.Clamp(YPos, 2901, 2955) )
 end
